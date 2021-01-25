@@ -1,8 +1,12 @@
 pragma solidity >=0.4.22 <0.6.0;
 
 import "./registerMeter.sol";
+import "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol";
 
 contract orderBook is registerMeter {
+
+    using SafeMath for uint32;
+    using SafeMath for uint64;
 
     struct SellOrder {
     address producer;
