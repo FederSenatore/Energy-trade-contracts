@@ -13,7 +13,7 @@ contract registerMeter {
         registeredMeters.push(msg.sender);
     }
 
-    //modifier to ensure that only registered meters can cretae orders
+    //modifier to ensure that only registered meters can create orders
     modifier onlyRegisteredMeters {
         require (registeredMeter[msg.sender] == true);
         _;
